@@ -18,13 +18,13 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function() {
-    return view('home');
+    return view('home', ["title" => "Home"]);
 });
 
 Route::get('/about', function() {
-    return view('about', ["nama" => "Muhammad Rusdiyanto", "email" => "sirusdi2005@gmail.com", "gambar" => "profil.jpeg"]);
+    return view('about', ["title" => "About", "nama" => "Muhammad Rusdiyanto", "email" => "sirusdi2005@gmail.com", "gambar" => "profil.jpeg"]);
 });
 
 Route::get('/gallery', function() {
-    return view('gallery');
+    return view('gallery', ["title" => "Gallery"]);
 });
