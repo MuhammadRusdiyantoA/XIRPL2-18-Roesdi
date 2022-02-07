@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,5 @@ Route::get('/about', function() {
 Route::get('/gallery', function() {
     return view('gallery', ["title" => "Gallery"]);
 });
+
+Route::resource('/contacts', ContactController::class);
